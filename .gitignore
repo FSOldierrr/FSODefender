@@ -1,0 +1,30 @@
+# Rust
+/target/
+**/target/
+Cargo.lock.bak
+
+# Node / Tauri
+node_modules/
+dist/
+apps/desktop/src-tauri/target/
+apps/desktop/src-tauri/gen/
+
+# Yerel veri ve sırlar
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+/quarantine/
+/data/
+signatures.local.json
+.env
+.env.*
+
+# Test çıktıları
+*.log
+samples/generated/
+
+# Editör
+.vscode/
+.idea/
+*.swp

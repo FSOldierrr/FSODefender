@@ -1,0 +1,18 @@
+[package]
+name = "fsod-cli"
+description = "FSODefender headless CLI"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+
+[[bin]]
+name = "fsod"
+path = "src/main.rs"
+
+[dependencies]
+fsod-core = { path = "../fsod-core" }
+anyhow.workspace = true
+clap.workspace = true
+serde_json.workspace = true
+chrono.workspace = true

@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "updated": "2026-11-14",
+  "hashes": {
+    "275a021bbfb6489e54d471899f7db9d1663fc695ec2fe2a2c4538aabf651fd0f": {
+      "name": "EICAR-Test-File",
+      "severity": "malicious",
+      "description": {
+        "tr": "EICAR antivirüs test dosyası",
+        "en": "EICAR antivirus test file"
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+[workspace]
+resolver = "3"
+members = ["crates/fsod-core", "crates/fsod-cli"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+authors = ["FSODefender"]
+
+[workspace.dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "2"
+anyhow = "1"
+tracing = "0.1"
+sha2 = "0.10"
+hex = "0.4"
+walkdir = "2"
+goblin = "0.10"
+uuid = { version = "1", features = ["v4"] }
+chrono = { version = "0.4", features = ["serde"] }
+rusqlite = { version = "0.32", features = ["bundled"] }
+yara-x = "1.23"
+zip = "9"
+notify = "8"
+chacha20poly1305 = "0.10"
+rand = "0.9"
+url = "2"
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls"] }
+tokio = { version = "1", features = ["rt-multi-thread", "sync", "time", "macros"] }
+windows-sys = { version = "0.59", features = ["Win32_Foundation", "Win32_Security_Cryptography"] }
+clap = { version = "4", features = ["derive"] }
+tempfile = "3"
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+strip = true

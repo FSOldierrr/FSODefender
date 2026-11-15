@@ -1,0 +1,8 @@
+# FSODefender yerel URL kara listesi
+# Biçim: host veya host/path — alt alan adları da eşleşir.
+# Yorum: # ile başlar. Buradaki adresler test/simülasyondur, gerçek değildir.
+malware.test
+phishing.test/login
+secure-bank-verify.test
+update-checker.test
+free-robux.example

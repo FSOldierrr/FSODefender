@@ -1,0 +1,38 @@
+[package]
+name = "fsod-core"
+description = "FSODefender core engine: scanning, signatures, heuristics, quarantine, realtime protection"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+
+[dependencies]
+serde.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
+tracing.workspace = true
+sha2.workspace = true
+hex.workspace = true
+walkdir.workspace = true
+goblin.workspace = true
+uuid.workspace = true
+chrono.workspace = true
+rusqlite.workspace = true
+yara-x.workspace = true
+# YARA-X 1.23, rsa 0.10'un `pkcs1v15` özelliğini açmadığı için derleme kırılıyor.
+# Doğrudan bağımlılıkla özellik birleştirmesi yapıp yukarı akış düzeltmesini bekliyoruz.
+rsa = { version = "0.10", features = ["pkcs1v15"] }
+zip.workspace = true
+notify.workspace = true
+chacha20poly1305.workspace = true
+rand.workspace = true
+url.workspace = true
+reqwest.workspace = true
+tokio.workspace = true
+
+[target.'cfg(windows)'.dependencies]
+windows-sys.workspace = true
+
+[dev-dependencies]
+tempfile.workspace = true
+serde_json.workspace = true
